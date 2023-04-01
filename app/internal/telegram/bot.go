@@ -11,10 +11,10 @@ type Bot struct {
 	commands *commands.Commands
 }
 
-func NewBot(botAPI *tgbotapi.BotAPI) *Bot {
+func NewBot(botAPI *tgbotapi.BotAPI, commands *commands.Commands) *Bot {
 	return &Bot{
 		botAPI:   botAPI,
-		commands: commands.NewCommands(),
+		commands: commands,
 	}
 }
 
